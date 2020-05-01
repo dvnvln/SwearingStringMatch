@@ -42,7 +42,8 @@ def main():
         valid = True
     else:
         valid = False
-    algo = input("waiiittt, what algo do u want to use? (bf (aka bruteforce) / kmp  / bm (aka boyer moore) / regex) : ")
+    print("what algo do you want to use?")
+    algo = input("(bf(bruteforce)/kmp/bm(boyer moore)/regex) : ")
     start_time = time.time()
     results = suggestWord(valid,findWord(wo,rWord),rBad,algo)
     elapsed_time = time.time() - start_time
