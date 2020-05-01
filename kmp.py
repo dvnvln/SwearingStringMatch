@@ -31,8 +31,9 @@ def kmp(pat, txt):#mencari pattern pada text menggunakan algoritma kmp
             j+=1
         
         if j == m :
-            arr_match.append(i-j)
-            j = arr[j-1]
+            # arr_match.append(i-j)
+            return True
+            # j = arr[j-1]
         
         elif i < n and pattern [j] != text[i]:
             if j != 0:
@@ -40,4 +41,4 @@ def kmp(pat, txt):#mencari pattern pada text menggunakan algoritma kmp
             else: #j==0
                 i+=1
 
-    return(len(arr_match)>0)
+    return(False)
