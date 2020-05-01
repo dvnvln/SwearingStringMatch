@@ -1,14 +1,14 @@
 import re
-import bm
-import kmp
-import bf
+from bf import *
+from bm import *
+from kmp import *
 import time
 
 def chooseAlgo(nama,word,badWords):
     if (nama=="kmp"):
         return (kmp(word,badWords))
     elif (nama=="bm"):
-        return(bm(word,badWords))
+        return(boym(word,badWords))
     elif (nama=="bf"):
         return(bruteforce(word,badWords))
     else:#nama == regex
@@ -42,7 +42,7 @@ def main():
         valid = True
     else:
         valid = False
-    algo = input("waiiittt, what algo do u want to use? (bf (aka bruteforce) / kmp  / bm (aka boyer moore) / regex) ")
+    algo = input("waiiittt, what algo do u want to use? (bf (aka bruteforce) / kmp  / bm (aka boyer moore) / regex) : ")
     start_time = time.time()
     results = suggestWord(valid,findWord(wo,rWord),rBad,algo)
     elapsed_time = time.time() - start_time
